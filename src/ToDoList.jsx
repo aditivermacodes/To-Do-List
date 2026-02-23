@@ -8,15 +8,18 @@ function ToDoList() {
     function handlenewTask(event) {
         setnewTask(event.target.value);
     }
+
     function addnewtask() {
         if(newtask.trim() !== ""){
         setTask(t=> [...t,newtask]);
         setnewTask("");
         }
     }
+
     function removetask(index) {
         setTask(task.filter((_,i)=>i!==index));
     }
+
     function moveuptask(index) {
         if(index>0) {
         const updatedTask = [...task];
@@ -24,13 +27,13 @@ function ToDoList() {
         setTask(updatedTask);
         }
     }
+
     function movedowntask(index) {
         if(index< task.length-1) {
         const updatedTask = [...task];
         [updatedTask[index],updatedTask[index+1]] = [updatedTask[index+1],updatedTask[index]];
         setTask(updatedTask);
-        }
-        
+        } 
     }
 
     return(
