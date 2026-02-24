@@ -25,8 +25,14 @@ function ToDoList() {
   }
 
   function removeTask(id) {
-    setTasks(prev => prev.filter(task => task.id !== id));
+  const element = document.getElementById(id);
+  if (element) {
+    element.classList.add("removing");
+    setTimeout(() => {
+      setTasks(prev => prev.filter(task => task.id !== id));
+    }, 300);
   }
+}
 
   function moveUpTask(index) {
     if (index > 0) {
@@ -66,7 +72,7 @@ function ToDoList() {
 
       <ol className="lis">
         {tasks.map((task, index) => (
-          <li className="task-item" key={task.id}>
+          <li id={task.id} className="task-item" key={task.id}>
             <span>{task.text}</span>
 
             <div className="btn-group">

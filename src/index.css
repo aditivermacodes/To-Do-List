@@ -106,10 +106,23 @@ body {
   transform: scale(1.02);
 }
 
+
+
 @keyframes slideIn {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+.task-item.removing {
+  animation: removeAnim 0.3s ease forwards;
+}
+
+@keyframes removeAnim {
+  to {
+    opacity: 0;
+    transform: translateX(40px);
   }
 }
 
