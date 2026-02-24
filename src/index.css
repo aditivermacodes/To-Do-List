@@ -1,13 +1,75 @@
-.todolist {
-  background-color: rgb(54, 9, 65);
-  color: aliceblue;
-  font-size: 2rem;
-  font-weight: bold;
-  width: 450px;
-  border-radius: 15px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+/* ===== Animated Background ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #1e1e2f, #2a0845, #3b0a57, #141e30);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.todolist {
+  width: 450px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.todolist:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== Task List ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Animated Task Item */
+.task-item {
+  background: rgba(255, 255, 255, 0.12);
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.4s ease forwards;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.task-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 .inp {
   text-align: center;
   padding: 10px;

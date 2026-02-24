@@ -44,7 +44,7 @@ function ToDoList() {
             <button className="inpbut" onClick={addnewtask}>Add</button>
             </div>
             <ol className="lis">
-                {task.map((task,index)=> <li key={index}>{task} 
+                {task.map((task,index)=> <li className="task-item" key={index}>{task} 
             <button className="rmbut" onClick={()=> removetask(index)}>👍</button>
             <button className="upbut" onClick={()=>moveuptask(index)}>👆</button>
             <button className="dnbut" onClick={()=>movedowntask(index)}>👇</button></li>)}
