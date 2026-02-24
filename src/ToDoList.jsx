@@ -74,7 +74,7 @@ function ToDoList() {
                 className="rmbut"
                 onClick={() => removeTask(task.id)}
               >
-                ❌
+                🗑
               </button>
 
               <button
