@@ -69,6 +69,17 @@ ul {
   }
 }
 
+.task-item.removing {
+  animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 
 .inp {
   text-align: center;
