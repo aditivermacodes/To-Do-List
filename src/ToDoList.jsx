@@ -1,55 +1,101 @@
-import { func } from "prop-types";
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 function ToDoList() {
-    const[task,setTask] = useState(["Breakfast","Gym"]);
-    const[newtask, setnewTask] = useState("");
+  const [tasks, setTasks] = useState([
+    { id: 1, text: "Breakfast" },
+    { id: 2, text: "Gym" }
+  ]);
 
-    function handlenewTask(event) {
-        setnewTask(event.target.value);
+  const [newTask, setNewTask] = useState("");
+
+  function handleNewTask(e) {
+    setNewTask(e.target.value);
+  }
+
+  function addNewTask() {
+    if (newTask.trim() !== "") {
+      const newItem = {
+        id: Date.now(),
+        text: newTask
+      };
+
+      setTasks(prev => [...prev, newItem]);
+      setNewTask("");
     }
+  }
 
-    function addnewtask() {
-        if(newtask.trim() !== ""){
-        setTask(t=> [...t,newtask]);
-        setnewTask("");
-        }
+  function removeTask(id) {
+    setTasks(prev => prev.filter(task => task.id !== id));
+  }
+
+  function moveUpTask(index) {
+    if (index > 0) {
+      const updated = [...tasks];
+      [updated[index], updated[index - 1]] =
+        [updated[index - 1], updated[index]];
+      setTasks(updated);
     }
+  }
 
-    function removetask(index) {
-        setTask(task.filter((_,i)=>i!==index));
+  function moveDownTask(index) {
+    if (index < tasks.length - 1) {
+      const updated = [...tasks];
+      [updated[index], updated[index + 1]] =
+        [updated[index + 1], updated[index]];
+      setTasks(updated);
     }
+  }
 
-    function moveuptask(index) {
-        if(index>0) {
-        const updatedTask = [...task];
-        [updatedTask[index],updatedTask[index-1]] = [updatedTask[index-1],updatedTask[index]];
-        setTask(updatedTask);
-        }
-    }
+  return (
+    <div className="todolist">
+      <h2>✨ My To Do List</h2>
 
-    function movedowntask(index) {
-        if(index< task.length-1) {
-        const updatedTask = [...task];
-        [updatedTask[index],updatedTask[index+1]] = [updatedTask[index+1],updatedTask[index]];
-        setTask(updatedTask);
-        } 
-    }
+      <div className="input-section">
+        <input
+          className="inp"
+          type="text"
+          placeholder="Enter a task..."
+          value={newTask}
+          onChange={handleNewTask}
+          onKeyDown={(e) => e.key === "Enter" && addNewTask()}
+        />
+        <button className="inpbut" onClick={addNewTask}>
+          Add
+        </button>
+      </div>
 
-    return(
-        <div className="todolist">
-            <h3>TO DO LIST</h3>
-            <div >
-            <input className="inp" type="text" placeholder="Enter a Task" value={newtask} onChange={handlenewTask} />
-            <button className="inpbut" onClick={addnewtask}>Add</button>
+      <ol className="lis">
+        {tasks.map((task, index) => (
+          <li className="task-item" key={task.id}>
+            <span>{task.text}</span>
+
+            <div className="btn-group">
+              <button
+                className="rmbut"
+                onClick={() => removeTask(task.id)}
+              >
+                ❌
+              </button>
+
+              <button
+                className="upbut"
+                onClick={() => moveUpTask(index)}
+              >
+                ⬆
+              </button>
+
+              <button
+                className="dnbut"
+                onClick={() => moveDownTask(index)}
+              >
+                ⬇
+              </button>
             </div>
-            <ol className="lis">
-                {task.map((task,index)=> <li className="task-item" key={index}>{task} 
-            <button className="rmbut" onClick={()=> removetask(index)}>👍</button>
-            <button className="upbut" onClick={()=>moveuptask(index)}>👆</button>
-            <button className="dnbut" onClick={()=>movedowntask(index)}>👇</button></li>)}
-            </ol>
-        </div>
-    )
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
 }
-export default ToDoList
+
+export default ToDoList;
