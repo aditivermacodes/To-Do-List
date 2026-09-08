@@ -21,7 +21,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>Built with React & Vite • Organize with style ✨</p>
+        <p>Built with React & Vite | Organize with style</p>
       </footer>
     </div>
   );

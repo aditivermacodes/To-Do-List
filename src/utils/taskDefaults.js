@@ -7,19 +7,19 @@ export const PRIORITIES = {
 export const PRIORITY_WEIGHTS = { high: 3, medium: 2, low: 1 };
 
 export const CATEGORIES = [
-  { id: "general", label: "General", emoji: "📌" },
-  { id: "work", label: "Work", emoji: "💼" },
-  { id: "personal", label: "Personal", emoji: "🏠" },
-  { id: "study", label: "Study", emoji: "📚" },
-  { id: "health", label: "Fitness & Health", emoji: "🏃" }
+  { id: "general", label: "General" },
+  { id: "work", label: "Work" },
+  { id: "personal", label: "Personal" },
+  { id: "study", label: "Study" },
+  { id: "health", label: "Fitness & Health" }
 ];
 
 export const THEMES = [
-  { id: "cosmic", name: "Cosmic Glow", icon: "✨" },
-  { id: "midnight", name: "Midnight Slate", icon: "🌙" },
-  { id: "cyberpunk", name: "Neon Cyber", icon: "⚡" },
-  { id: "emerald", name: "Emerald Mist", icon: "🌿" },
-  { id: "light", name: "Frost Minimal", icon: "☀️" }
+  { id: "cosmic", name: "Cosmic Glow" },
+  { id: "midnight", name: "Midnight Slate" },
+  { id: "cyberpunk", name: "Neon Cyber" },
+  { id: "emerald", name: "Emerald Mist" },
+  { id: "light", name: "Frost Minimal" }
 ];
 
 export const INITIAL_TASKS = [

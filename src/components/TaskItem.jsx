@@ -120,7 +120,6 @@ export default function TaskItem({
             <div className="task-meta-row">
               {/* Category */}
               <span className="task-badge category-badge" title={`Category: ${categoryInfo.label}`}>
-                <span>{categoryInfo.emoji}</span>
                 <span>{categoryInfo.label}</span>
               </span>
 

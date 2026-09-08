@@ -65,7 +65,7 @@ export default function ToDoList() {
       if (isBecomingComplete && remainingActive === 0 && updated.length > 0) {
         triggerConfetti();
         setToast({
-          message: "Incredible work! All tasks are complete! 🎉",
+          message: "Incredible work! All tasks are complete!",
           type: "success",
           duration: 5000
         });

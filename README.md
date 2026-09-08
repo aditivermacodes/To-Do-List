@@ -1,39 +1,39 @@
-# ⚡ TaskFlow — Modern To-Do & Task Manager
+# TaskFlow - Modern To-Do & Task Manager
 
-A sleek, responsive, glassmorphic productivity application built with **React 19** and **Vite**. Organize your daily tasks, set priorities and deadlines, track your completion progress with dynamic analytics, and switch between stunning visual themes.
+A sleek, responsive, glassmorphic productivity application built with **React 19** and **Vite**. Organize your daily tasks, set priorities and deadlines, track your completion progress with dynamic analytics, and switch between clean visual themes.
 
 ---
 
-## ✨ Features
+## Features
 
-- **💾 Persistent Local Storage**: Tasks and theme preferences are automatically saved in your browser's `localStorage` so your data is never lost.
-- **🎨 5 Visual Themes**:
+- **Persistent Local Storage**: Tasks and theme preferences are automatically saved in your browser's `localStorage` so your data is never lost.
+- **5 Visual Themes**:
   - **Cosmic Glow**: Deep purple & violet glassmorphism (default)
   - **Midnight Slate**: Clean obsidian & ice-blue dark theme
   - **Neon Cyber**: High-contrast cyberpunk synthwave aesthetic
   - **Emerald Mist**: Soothing emerald & teal forest palette
   - **Frost Minimal**: Elegant, accessible light theme
-- **🎯 Task Prioritization**: Mark tasks as **High** (🔴), **Medium** (🟡), or **Low** (🟢) with color-coded badges and priority-based sorting.
-- **🏷️ Categories & Tags**: Organize tasks under **Work** (💼), **Personal** (🏠), **Study** (📚), **Fitness & Health** (🏃), or **General** (📌).
-- **📅 Due Date Indicators**: Set task deadlines with intelligent badges that automatically flag **Overdue**, **Due Today**, or **Upcoming** tasks.
-- **🔍 Real-Time Search & Filters**:
+- **Task Prioritization**: Mark tasks as **High**, **Medium**, or **Low** with color-coded badges and priority-based sorting.
+- **Categories & Tags**: Organize tasks under **Work**, **Personal**, **Study**, **Fitness & Health**, or **General**.
+- **Due Date Indicators**: Set task deadlines with intelligent badges that automatically flag **Overdue**, **Due Today**, or **Upcoming** tasks.
+- **Real-Time Search & Filters**:
   - Instant live search by keyword
   - Filter tabs: **All**, **Active**, and **Completed**
   - Category dropdown filter
   - Sort by: **Custom Order**, **Due Date**, **Priority**, **Title (A-Z)**, or **Newest First**
-- **✏️ Inline Editing**: Double-click any task title or click the edit icon to update tasks in-place with `Enter` (save) and `Escape` (cancel).
-- **↩️ Instant Delete with Undo**: Accidentally deleted a task? Restore it immediately with the interactive toast notification's "Undo" button.
-- **📊 Progress & Motivation**:
+- **Inline Editing**: Double-click any task title or click the edit icon to update tasks in-place with `Enter` (save) and `Escape` (cancel).
+- **Instant Delete with Undo**: Accidentally deleted a task? Restore it immediately with the interactive toast notification's "Undo" button.
+- **Progress & Motivation**:
   - Live animated completion progress bar and percentage counter
-  - Dynamic motivational quotes that adapt to your progress
+  - Dynamic motivational feedback that adapts to your progress
   - **Clear Done** quick action to purge finished items
-- **🎉 Celebratory Confetti**: Triggers a celebratory confetti shower when you complete all active tasks!
-- **📤 Backup & Restore**: One-click **JSON Export** to backup your tasks and **JSON Import** to restore or migrate data across devices.
-- **📱 100% Mobile & Tablet Responsive**: Optimized touch targets and responsive layouts tailored for mobile devices and wide screens alike.
+- **Celebratory Confetti**: Triggers a celebratory confetti shower when you complete all active tasks.
+- **Backup & Restore**: One-click **JSON Export** to backup your tasks and **JSON Import** to restore or migrate data across devices.
+- **100% Mobile & Tablet Responsive**: Optimized touch targets and responsive layouts tailored for mobile devices and wide screens alike.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [React 19](https://react.dev/)
 - **Build Tool**: [Vite](https://vite.dev/)
@@ -43,7 +43,7 @@ A sleek, responsive, glassmorphic productivity application built with **React 19
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -81,18 +81,18 @@ A sleek, responsive, glassmorphic productivity application built with **React 19
 
 ---
 
-## ⌨️ Keyboard Shortcuts & UX
+## Keyboard Shortcuts & UX
 
 | Action | Shortcut |
 | :--- | :--- |
 | **Add new task** | Press `Enter` in the input field |
 | **Save edited task** | Press `Enter` while editing |
 | **Cancel editing** | Press `Escape` while editing |
-| **Edit task** | Double-click task text or click the ✏️ icon |
+| **Edit task** | Double-click task text or click the edit icon |
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 To-Do-List/
@@ -121,6 +121,6 @@ To-Do-List/
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).

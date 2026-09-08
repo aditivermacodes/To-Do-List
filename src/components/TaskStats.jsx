@@ -9,11 +9,11 @@ export default function TaskStats({ tasks, onClearCompleted, onExportTasks, onIm
 
   const getMotivation = () => {
     if (total === 0) return "Ready to start your day? Add your first task!";
-    if (percentage === 100) return "Outstanding! You crushed all your tasks! 🎉";
-    if (percentage >= 75) return "Almost there! Keep up the great momentum! 🚀";
-    if (percentage >= 50) return "Halfway through! Stay focused! 💪";
-    if (percentage > 0) return "Great start! One step at a time ✨";
-    return "Let's make today productive! 🎯";
+    if (percentage === 100) return "Outstanding! You crushed all your tasks!";
+    if (percentage >= 75) return "Almost there! Keep up the great momentum!";
+    if (percentage >= 50) return "Halfway through! Stay focused!";
+    if (percentage > 0) return "Great start! One step at a time.";
+    return "Let's make today productive!";
   };
 
   const handleFileChange = (e) => {
